@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postman Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="top: 0; position: sticky; background: white">Postman Tool</h1>
+      <div class="form">
+        <select id="method">
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+        <input type="text" id="url" placeholder="Enter API URL" />
+        <button onclick="sendRequest()">Send</button>
+      </div>
+      <div class="loader" id="loader"></div>
+      <div class="params-table" id="params-table">
+        <h2>Query Params</h2>
+        <table id="params">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" class="key" placeholder="Enter key" /></td>
+              <td>
+                <input type="text" class="value" placeholder="Enter value" />
+              </td>
+              <td>
+                <button class="delete-row" onclick="deleteRow(this)">
+                  Remove
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button onclick="addRow()">Add Row</button>
+      </div>
+
+      <div class="response">
+        <h2>Response:</h2>
+        <pre id="response"></pre>
+      </div>
+    </div>
+
+    <script src="Postman.js"></script>
+  </body>
+</html>
