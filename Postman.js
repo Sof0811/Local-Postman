@@ -1,7 +1,8 @@
 const sendRequest = async () => {
   debugger;
-  var method = document.getElementById("method").value;
-  var url = document.getElementById("url").value;
+  let method = document.getElementById("method").value;
+  let url = document.getElementById("url").value;
+
 
   if (!url.trim()) {
     alert("Please enter a valid URL.");
@@ -15,6 +16,7 @@ const sendRequest = async () => {
 
   var loader = document.getElementById("loader");
   loader.style.display = "block";
+
 
   // Extract parameters from the URL for all methods
   let urlParams = getUrlParams(url),

@@ -15,9 +15,9 @@ app.listen(port, () => {
 });
 
 const books = [
-  { id: 1, title: "love", author: "franklin" },
-  { id: 2, title: "hate story", author: "Leo" },
-  { id: 3, title: "Good mind", author: "Karlin" },
+  { id: 1, title: "Sample one", author: "Shakes" },
+  { id: 2, title: "Sample two", author: "Justin" },
+  { id: 3, title: "Sample Three", author: "Martin" },
 ];
 
 
@@ -25,6 +25,7 @@ const books = [
 app.get("/booksdetails", (req, res) => {
   // res.status(200).send(books);
   res.send(books);
+
 });
 
 
